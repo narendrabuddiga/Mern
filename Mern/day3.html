@@ -1,0 +1,50 @@
+<html>
+
+<head>
+  <title>style</title>
+</head>
+<style>
+  .address {
+    background-color: red;
+    color: yellow;
+  }
+
+  #head {
+    background-color: green;
+    color: purple;
+  }
+</style>
+
+<body>
+  <button onclick="testfunction()">Hide</button>
+  <main>
+    This is Main Block
+    <div class="details" id="head">
+      This First Div
+    </div>
+    <div class="address">
+      This second Div
+    </div>
+  </main>
+  <p>this is my paragragh is block element</p>
+  <p>this is my second paragragh is block element</p>
+  <span> this is my span is inline element</span>
+  <span> this is my second span is inline element</span>
+
+  <script>
+    function testfunction() {
+      var val = document.getElementById("name");
+      for (var i = 0; i < val.length; i++) {
+        val[i].style.display = "none";
+      }
+    }
+  </script>
+  <form>
+    <label>Name:</label>
+    <input type="text" id="name" value="smaple">
+  </form>
+  <!-- <iframe src="/index.html" width="50px" height="80px"> 
+  </iframe>   -->
+</body>
+
+</html>
