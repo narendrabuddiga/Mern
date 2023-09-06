@@ -1,0 +1,68 @@
+<html>
+
+<head>
+  <title>Title</title>
+</head>
+
+<body>
+  <!-- <video>
+    <source src='./data/' type='video/mp4/ogg/avi/mpg'>
+  </video>
+  <!-- <audio controls>
+     <source src='./data/' type='audio/mp3/mpeg/wav'>
+  </audio> -->
+  <!-- <object data='./index.html'></object> -->
+
+   <!-- <iframe src="https://mvnrepository.com/artifact/org.docx4j/docx4j" width="412" height="315"> 
+  </iframe>   --> 
+  <!-- API-> Application programming interface
+  Data
+  CRUD-> create Read update delete
+  READ-> GET
+  CREATE-> POST
+  Update-> PUT
+  Delete->DELETE
+  HTML API
+   -->
+
+  <form>
+    <label>Name:</label>
+    <input type="text" class="name" value="">
+  </form>
+  
+  <div id='result'></div>
+  <!-- <p>HTML API</p>
+<button onclick="myfunction()">get Location</button> 
+<p id='location'></p>-->
+  <script>
+    var i= document.getElementById('location');
+    // var name= document.getElementByClass('name');
+
+    function myfunctionname(){
+      var name= "nandhu";
+      if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(showLoc);
+      }else{
+        i.innerHTML="not found";
+      }
+    }
+
+    function showLoc(pos){
+      i.innerHTML="latitude:"+pos.coords.latitude+
+        "longitude:"+pos.coords.longitude;
+      console.log(pos.coords);
+    }
+
+    if(typeof(Storage)!=="undefined"){
+      localStorage.setItem("name","nandhu");
+      localStorage.setItem("lastname","bob");
+      document.getElementById('result').innerHTML=localStorage.getItem('name');
+    }else{
+      document.getElementById('result').innerHTML="sorry no local storage";
+    }
+
+    console.log(document);
+  </script> 
+</body>
+
+</html>
